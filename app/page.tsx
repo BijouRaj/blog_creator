@@ -4,6 +4,8 @@ import { BlogPostCard } from "@/components/general/BlogpostCard";
 import { Suspense } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 
+export const revalidate = 60;
+
 async function getData() {
   const data = await prisma.blogPost.findMany({
     select: {
